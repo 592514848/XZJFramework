@@ -10,21 +10,21 @@
 
 @interface UIColor (AppConfigColor)
 /**
- *  background color
+ *  默认系统背景颜色
  *
  *  @return UIColor
  */
 +(UIColor *)viewBackgroundColor;
 
 /**
- *  App default black color
+ *  默认黑色字体颜色
  *
  *  @return UIColor
  */
 +(UIColor *)textBlackColor;
 
 /**
- *  The default font gray
+ *  默认灰色字体颜色
  *
  *  @return UIColor
  */

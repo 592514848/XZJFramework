@@ -10,17 +10,17 @@
 
 @implementation UIColor (AppConfigColor)
 
-#pragma mark - The default view background
+#pragma mark - 默认背景颜色
 +(UIColor *)viewBackgroundColor{
     return HEX_RGB(0xf0f0f0);
 }
 
-#pragma mark - The default font black
+#pragma mark - 默认黑色字体颜色
 +(UIColor *)textBlackColor{
     return HEX_RGB(0x343434);
 }
 
-#pragma mark - The default font gray
+#pragma mark - 默认灰色字体颜色
 +(UIColor *)textGrayColor{
     return HEX_RGB(0xa9a9a9);
 }
