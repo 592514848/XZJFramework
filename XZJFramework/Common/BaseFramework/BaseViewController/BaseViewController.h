@@ -10,7 +10,7 @@
 
 @interface BaseViewController : UIViewController
 /**
- *  current viewController's height
+ *   当前视图的高度
  */
 @property(nonatomic, assign) CGFloat contentHeight;
 @end

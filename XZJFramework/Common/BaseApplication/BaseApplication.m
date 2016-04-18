@@ -40,12 +40,12 @@ static BaseApplication *baseApplication = nil;
 //- (void)getLoginuser{
 //    self.loginUser = [NSKeyedUnarchiver unarchiveObjectWithFile: USER_ARCHIVE];
 //}
-//
-//#pragma mark 注销
-//- (void)removeLoginUser{
-//    NSFileManager *defaultManager = [NSFileManager defaultManager];
-//    if ([defaultManager isDeletableFileAtPath: USER_ARCHIVE]) {
-//        [defaultManager removeItemAtPath: USER_ARCHIVE error:nil];
-//    }
-//}
+
+#pragma mark 注销
+- (void)removeLoginUser{
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    if ([defaultManager isDeletableFileAtPath: USER_ARCHIVE]) {
+        [defaultManager removeItemAtPath: USER_ARCHIVE error:nil];
+    }
+}
 @end

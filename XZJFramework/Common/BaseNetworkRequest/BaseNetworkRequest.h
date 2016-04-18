@@ -13,46 +13,46 @@ typedef void (^RequestFailedBlock)(id DAO, NSError *error);
 
 @interface BaseNetworkRequest : NSObject
 /**
- *  Network request timeout
+ *  网络请求超时时间
  */
 @property(nonatomic, assign) CGFloat timeoutInterval;
 
 
 /**
- *  Build request interface address
+ *  构建请求地址
  *
- *  @return The requested interface address
+ *  @return 请求地址
  */
 - (NSString *)requestUrlPath;
 
 /**
- *  validate request parameters
+ *  验证请求参数
  */
 - (BOOL)validateRequestParameters;
 
 /**
- *  Build request parameters
+ *  构建请求参数
  *
- *  @return The parameters of the request
+ *  @return 请求参数
  */
 - (NSDictionary *)parameters;
 
 /**
- *  Return the data validation interfaces
+ *  验证接口返回数据
  *
- *  @param returnData Interface the data returned
+ *  @param 接口返回数据
  *
- *  @return Validation by returning YES;Validation failure returns NO
+ *  @return 验证结果（YES:验证成功 ； NO:验证失败）
  */
 - (BOOL)validateResponseData:(id) returnData;
 
 /**
- *  The Get method request data
+ *  Get 请求方式
  */
 - (void)getDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
 
 /**
- *  The Post method request data
+ *  Post 请求方式
  */
 - (void)postDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
 @end

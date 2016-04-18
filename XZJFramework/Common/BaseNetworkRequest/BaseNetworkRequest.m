@@ -11,12 +11,12 @@
 
 @interface BaseNetworkRequest()
 /**
- *  request manager(AF_3.0 new method)
+ *  请求管理器
  */
 @property(nonatomic, strong) AFHTTPSessionManager *networkingManager;
 
 /**
- *  Authorization token
+ *  接口认证token
  */
 @property(nonatomic, strong) NSString *authToken;
 @end
@@ -35,11 +35,11 @@
     self = [super init];
     if(self){
         /**
-         *  The default timeout of 10s
+         *  默认超时时间
          */
         self.timeoutInterval = 10.0f;
         /**
-         *  initialization server token
+         *  默认接口认证token
          */
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         self.authToken = VALIDATE_STRING([userDefaults objectForKey: SERVER_TOKEN]);
@@ -48,66 +48,59 @@
 }
 
 
-#pragma mark - private method
-#pragma mark Build request interface address
+#pragma mark - public method
+#pragma mark 构建请求地址
 - (NSString *)requestUrlPath{
     return @"";
 }
 
-#pragma mark Build request parameters
+#pragma mark 构建请求参数
 - (NSDictionary *)parameters{
     return @{};
 }
 
-#pragma mark - public method
-#pragma mark validate request parameters
+#pragma mark 验证请求参数
 - (BOOL)validateRequestParameters{
-    /**
-     *  The default is to verify through
-     */
     return YES;
 }
 
-#pragma mark Return the data validation interfaces
+#pragma mark 验证接口返回数据
 - (BOOL)validateResponseData:(id) returnData{
     return YES;
 }
 
-#pragma mark The basic configuration information build request
+#pragma mark 请求的基本配置信息
 - (BOOL)buildRequestConfigInfo{
     /**
-     *  Verify the submitted data interface specification
+     *  验证请求参数
      */
     if(![self validateRequestParameters]){
         return NO;
     }
     
     /**
-     *  Set the custom timeout
+     *  设置请求超时时间
      */
     [self.networkingManager.requestSerializer setTimeoutInterval: self.timeoutInterval];
     /**
-     *  The type of setup to accept
+     *  设置请求的的接受类型
      */
     [self.networkingManager.responseSerializer setAcceptableContentTypes: [NSSet setWithObjects:@"text/plain",@"text/json",@"application/json",@"text/javascript",@"text/html", @"application/javascript", @"text/js", nil]];
     /**
-     *  Set the authentication information
+     *  设置认证token
      */
     [self.networkingManager.requestSerializer setValue: self.authToken forHTTPHeaderField: @"Authorization"];
     return YES;
 }
 
-#pragma mark The Post method request data
+#pragma mark Post
 - (void)postDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure{
-    /**
-     *  The basic configuration information build request
-     */
     if(![self buildRequestConfigInfo]){
         return;
     }
     
     /**
-     *  Start a Post request data interface
+     *  开始Post 请求
      */
     WS(weakSelf);
     [self.networkingManager POST: [self requestUrlPath] parameters: [self parameters] progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -123,17 +116,14 @@
     }];
 }
 
-#pragma mark The Get method request data
+#pragma mark Get
 - (void)getDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure{
-    /**
-     *  The basic configuration information build request
-     */
     if(![self buildRequestConfigInfo]){
         return;
     }
     
     /**
-     *  Began to Get request data interface
+     *  开始Get请求
      */
     WS(weakSelf);
     [self.networkingManager GET: [self requestUrlPath] parameters: [self parameters] progress:^(NSProgress * _Nonnull downloadProgress) {

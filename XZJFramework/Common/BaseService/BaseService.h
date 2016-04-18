@@ -10,7 +10,7 @@
 
 @interface BaseService : NSObject
 /**
- *  datasource
+ *  数据源
  */
 @property(nonatomic, strong) NSMutableArray *dataSourceArray;
 @end

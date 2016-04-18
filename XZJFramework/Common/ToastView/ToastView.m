@@ -51,47 +51,45 @@ static ToastView * toastView = nil;
 
 #pragma mark - public method
 /**
- *  show the specified message
- *  default duration is 2.0s
- *  @param text message
+ *  显示指定信息
+ *  默认2秒隐藏
+ *  @param text 要显示的消息
  */
 - (void)showWithText:(NSString *) text{
     [self showWithText: text duration: 2.0f];
 }
 /**
- *  show the specified message
+ *  显示指定信息
  *
- *  @param text     message
- *  @param duration The disappearance of time
+ *  @param text     要显示的消息
+ *  @param duration 隐藏的时间
  */
 - (void)showWithText:(NSString *) text duration:(CGFloat) duration{
     if(IsStrEmpty(text)){
         return;
     }
-    // Initialization code
     UIFont *font = [UIFont systemFontOfSize:16];
     NSDictionary *attributes = @{NSFontAttributeName: font};
     CGSize textSize = [text sizeWithAttributes: attributes];
     
-    //update textLabel
+    //更新textLabel
     [self.textLabel setFrame: CGRectMake(10.0f, 10.0f, textSize.width, textSize.height)];
     [self.textLabel setText: text];
     [self.textLabel setFont: font];
     
-    //update self
     CGRect frame;
     frame.size = CGSizeMake(textSize.width + 20.0f, textSize.height + 20.0f);
     frame.origin = CGPointMake((SCREEN_WIDTH - frame.size.width) / 2, SCREEN_HEIGHT - frame.size.height - TABBAR_HEIGHT - NAVIGATIONBAR_HEIGHT - 20.0f);
     [self setFrame: frame];
     [WINDOW addSubview:self];
     
-    //timer
+    //定时器
     NSTimer *timer = [NSTimer timerWithTimeInterval: duration  target:self selector:@selector(removeToastView) userInfo:nil repeats:NO];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     
 }
 
-#pragma mark － remove toastView
+#pragma mark － 移除
 - (void)removeToastView{
     [UIView animateWithDuration: 0.5f animations:^{
         toastView.alpha = 0.0f;

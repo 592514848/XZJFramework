@@ -14,7 +14,7 @@
     self = [super init];
     if(self){
         /**
-         *  initial viewContent's height
+         *  初始化当前视图的高度
          */
         self.contentHeight = (SCREEN_HEIGHT - NAVIGATIONBAR_HEIGHT);
     }
@@ -25,13 +25,8 @@
     [super viewDidLoad];
     [self.view setBackgroundColor: [UIColor viewBackgroundColor]];
     /**
-     *  Make the page layout from under the navigation bar
+     *  设置视图布局的起始点从navigationBar底部开始
      */
     self.navigationController.navigationBar.translucent = NO;
-    /**
-     *  When using this way, when hidden TabBar will leave black bar at the bottom
-     */
-//    [self setEdgesForExtendedLayout: UIRectEdgeNone];
-//    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 @end

@@ -13,22 +13,22 @@
 @interface BaseTableViewController : BaseViewController<EGORefreshTableDelegate, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate>
 @property(nonatomic, strong) UITableView *mainTableView;
 /**
- *  remove refreshHeaderView
+ *  移除刷新视图
  */
 - (void)removeRefreshHeaderView;
 
 /**
- *  update and create footerView
+ *  更新并创建上拉视图
  */
 - (void)updateRefreshFooterView;
 
 /**
- *  The drop-down refresh the callback
+ *  响应下拉刷新
  */
 - (void)callbackForHeaderRefreshView;
 
 /**
- *  Pull-up loads more callback
+ *  响应上拉加载更多
  */
 - (void)callbackForFooterRefreshView;
 @end
