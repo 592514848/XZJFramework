@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BaseTabBarController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,20 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    /**
+     *  加载根视图
+     */
+    self.window = [[UIWindow alloc] initWithFrame: [[UIScreen mainScreen] bounds]];
+    [self.window setBackgroundColor: [UIColor whiteColor]];
+    [self.window makeKeyAndVisible];
+    if(![BASEAPPLICATION isLogin]){
+        BaseTabBarController *mainVC = [[BaseTabBarController alloc] init];
+        [self.window setRootViewController: mainVC];
+    }
+    else{
+        //登录界面
+    }
+
     return YES;
 }
 

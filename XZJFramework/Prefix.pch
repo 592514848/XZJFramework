@@ -1,0 +1,35 @@
+//
+//  Prefix.pch
+//  XZJFramework
+//
+//  Created by 熊梓君 on 4/18/16.
+//  Copyright © 2016 Xiong, Zijun. All rights reserved.
+//
+
+#ifndef Prefix_pch
+#define Prefix_pch
+
+/**
+ *  导入系统文件
+ */
+
+
+/**
+ *  导入自定义文件
+ */
+#import "BaseApplication.h"
+#import "AppConstant.h"
+#import "UIColor+SNFoundation.h"
+#import "ToastView.h"
+#import "BaseTableViewCellDTO.h"
+#import "UIColor+AppConfigColor.h"
+#import "UIImage+ExFoundation.h"
+
+/**
+ *  导入第三方库文件
+ */
+#import <UIView+SDAutoLayout.h>
+#import <UIImageView+WebCache.h>
+#import <UITableView+SDAutoTableViewCellHeight.h>
+
+#endif /* Prefix_pch */

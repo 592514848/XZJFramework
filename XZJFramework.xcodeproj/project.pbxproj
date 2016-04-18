@@ -7,25 +7,69 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B76326DB9A05FFB0976760DD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8568814B3B14232284BEE230 /* libPods.a */; };
 		E7561BFA1CC4773100E62331 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561BF91CC4773100E62331 /* main.m */; };
 		E7561BFD1CC4773100E62331 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561BFC1CC4773100E62331 /* AppDelegate.m */; };
-		E7561C001CC4773100E62331 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561BFF1CC4773100E62331 /* ViewController.m */; };
-		E7561C031CC4773100E62331 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7561C011CC4773100E62331 /* Main.storyboard */; };
 		E7561C051CC4773100E62331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7561C041CC4773100E62331 /* Assets.xcassets */; };
-		E7561C081CC4773100E62331 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7561C061CC4773100E62331 /* LaunchScreen.storyboard */; };
+		E7561C301CC4791300E62331 /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C131CC4791300E62331 /* BaseNavigationController.m */; };
+		E7561C311CC4791300E62331 /* BaseTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C161CC4791300E62331 /* BaseTabBarController.m */; };
+		E7561C321CC4791300E62331 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C191CC4791300E62331 /* BaseTableViewController.m */; };
+		E7561C331CC4791300E62331 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = E7561C1B1CC4791300E62331 /* blueArrow.png */; };
+		E7561C341CC4791300E62331 /* EGORefreshTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C1D1CC4791300E62331 /* EGORefreshTableFooterView.m */; };
+		E7561C351CC4791300E62331 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C1F1CC4791300E62331 /* EGORefreshTableHeaderView.m */; };
+		E7561C361CC4791300E62331 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C231CC4791300E62331 /* BaseViewController.m */; };
+		E7561C371CC4791300E62331 /* BaseNetworkRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C261CC4791300E62331 /* BaseNetworkRequest.m */; };
+		E7561C381CC4791300E62331 /* BaseService.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C291CC4791300E62331 /* BaseService.m */; };
+		E7561C391CC4791300E62331 /* BaseTableViewCellDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C2C1CC4791300E62331 /* BaseTableViewCellDTO.m */; };
+		E7561C3A1CC4791300E62331 /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C2F1CC4791300E62331 /* ToastView.m */; };
+		E7561C3E1CC4798700E62331 /* BaseApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C3D1CC4798700E62331 /* BaseApplication.m */; };
+		E7561C491CC47D0400E62331 /* UIColor+AppConfigColor.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C441CC47D0400E62331 /* UIColor+AppConfigColor.m */; };
+		E7561C4A1CC47D0400E62331 /* UIColor+SNFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C461CC47D0400E62331 /* UIColor+SNFoundation.m */; };
+		E7561C4B1CC47D0400E62331 /* UIImage+ExFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7561C481CC47D0400E62331 /* UIImage+ExFoundation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		73F6AEADF1433B35BC6C43B2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8568814B3B14232284BEE230 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7561BF51CC4773100E62331 /* XZJFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XZJFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7561BF91CC4773100E62331 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E7561BFB1CC4773100E62331 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E7561BFC1CC4773100E62331 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E7561BFE1CC4773100E62331 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E7561BFF1CC4773100E62331 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		E7561C021CC4773100E62331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7561C041CC4773100E62331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		E7561C071CC4773100E62331 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7561C091CC4773100E62331 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E7561C121CC4791300E62331 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		E7561C131CC4791300E62331 /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		E7561C151CC4791300E62331 /* BaseTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTabBarController.h; sourceTree = "<group>"; };
+		E7561C161CC4791300E62331 /* BaseTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTabBarController.m; sourceTree = "<group>"; };
+		E7561C181CC4791300E62331 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		E7561C191CC4791300E62331 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		E7561C1B1CC4791300E62331 /* blueArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueArrow.png; sourceTree = "<group>"; };
+		E7561C1C1CC4791300E62331 /* EGORefreshTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableFooterView.h; sourceTree = "<group>"; };
+		E7561C1D1CC4791300E62331 /* EGORefreshTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableFooterView.m; sourceTree = "<group>"; };
+		E7561C1E1CC4791300E62331 /* EGORefreshTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGORefreshTableHeaderView.h; sourceTree = "<group>"; };
+		E7561C1F1CC4791300E62331 /* EGORefreshTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EGORefreshTableHeaderView.m; sourceTree = "<group>"; };
+		E7561C201CC4791300E62331 /* EGOViewCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EGOViewCommon.h; sourceTree = "<group>"; };
+		E7561C221CC4791300E62331 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		E7561C231CC4791300E62331 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		E7561C251CC4791300E62331 /* BaseNetworkRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetworkRequest.h; sourceTree = "<group>"; };
+		E7561C261CC4791300E62331 /* BaseNetworkRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetworkRequest.m; sourceTree = "<group>"; };
+		E7561C281CC4791300E62331 /* BaseService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseService.h; sourceTree = "<group>"; };
+		E7561C291CC4791300E62331 /* BaseService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseService.m; sourceTree = "<group>"; };
+		E7561C2B1CC4791300E62331 /* BaseTableViewCellDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCellDTO.h; sourceTree = "<group>"; };
+		E7561C2C1CC4791300E62331 /* BaseTableViewCellDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCellDTO.m; sourceTree = "<group>"; };
+		E7561C2E1CC4791300E62331 /* ToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastView.h; sourceTree = "<group>"; };
+		E7561C2F1CC4791300E62331 /* ToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastView.m; sourceTree = "<group>"; };
+		E7561C3C1CC4798700E62331 /* BaseApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseApplication.h; sourceTree = "<group>"; };
+		E7561C3D1CC4798700E62331 /* BaseApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseApplication.m; sourceTree = "<group>"; };
+		E7561C3F1CC4799B00E62331 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		E7561C411CC47CBB00E62331 /* AppConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConstant.h; sourceTree = "<group>"; };
+		E7561C431CC47D0400E62331 /* UIColor+AppConfigColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+AppConfigColor.h"; sourceTree = "<group>"; };
+		E7561C441CC47D0400E62331 /* UIColor+AppConfigColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+AppConfigColor.m"; sourceTree = "<group>"; };
+		E7561C451CC47D0400E62331 /* UIColor+SNFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+SNFoundation.h"; sourceTree = "<group>"; };
+		E7561C461CC47D0400E62331 /* UIColor+SNFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+SNFoundation.m"; sourceTree = "<group>"; };
+		E7561C471CC47D0400E62331 /* UIImage+ExFoundation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ExFoundation.h"; sourceTree = "<group>"; };
+		E7561C481CC47D0400E62331 /* UIImage+ExFoundation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ExFoundation.m"; sourceTree = "<group>"; };
+		F36434798EB391657ACFE56F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +77,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B76326DB9A05FFB0976760DD /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		910308BA90065CCF3EDFF2EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				73F6AEADF1433B35BC6C43B2 /* Pods.debug.xcconfig */,
+				F36434798EB391657ACFE56F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E7561BEC1CC4773100E62331 = {
 			isa = PBXGroup;
 			children = (
 				E7561BF71CC4773100E62331 /* XZJFramework */,
 				E7561BF61CC4773100E62331 /* Products */,
+				910308BA90065CCF3EDFF2EC /* Pods */,
+				FAEF3B760E1AB49DE42E1F9B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +114,7 @@
 		E7561BF71CC4773100E62331 /* XZJFramework */ = {
 			isa = PBXGroup;
 			children = (
-				E7561BFB1CC4773100E62331 /* AppDelegate.h */,
-				E7561BFC1CC4773100E62331 /* AppDelegate.m */,
-				E7561BFE1CC4773100E62331 /* ViewController.h */,
-				E7561BFF1CC4773100E62331 /* ViewController.m */,
-				E7561C011CC4773100E62331 /* Main.storyboard */,
-				E7561C041CC4773100E62331 /* Assets.xcassets */,
-				E7561C061CC4773100E62331 /* LaunchScreen.storyboard */,
-				E7561C091CC4773100E62331 /* Info.plist */,
+				E7561C0F1CC4791300E62331 /* Common */,
 				E7561BF81CC4773100E62331 /* Supporting Files */,
 			);
 			path = XZJFramework;
@@ -74,9 +123,164 @@
 		E7561BF81CC4773100E62331 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E7561C041CC4773100E62331 /* Assets.xcassets */,
+				E7561BFB1CC4773100E62331 /* AppDelegate.h */,
+				E7561BFC1CC4773100E62331 /* AppDelegate.m */,
+				E7561C091CC4773100E62331 /* Info.plist */,
 				E7561BF91CC4773100E62331 /* main.m */,
+				E7561C3F1CC4799B00E62331 /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E7561C0F1CC4791300E62331 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C421CC47D0400E62331 /* Foundation */,
+				E7561C401CC47CBB00E62331 /* Constant */,
+				E7561C3B1CC4798700E62331 /* BaseApplication */,
+				E7561C101CC4791300E62331 /* BaseFramework */,
+				E7561C241CC4791300E62331 /* BaseNetworkRequest */,
+				E7561C271CC4791300E62331 /* BaseService */,
+				E7561C2A1CC4791300E62331 /* BaseTableViewCellDTO */,
+				E7561C2D1CC4791300E62331 /* ToastView */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		E7561C101CC4791300E62331 /* BaseFramework */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C111CC4791300E62331 /* BaseNavigationController */,
+				E7561C141CC4791300E62331 /* BaseTabBarController */,
+				E7561C171CC4791300E62331 /* BaseTableViewController */,
+				E7561C211CC4791300E62331 /* BaseViewController */,
+			);
+			path = BaseFramework;
+			sourceTree = "<group>";
+		};
+		E7561C111CC4791300E62331 /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C121CC4791300E62331 /* BaseNavigationController.h */,
+				E7561C131CC4791300E62331 /* BaseNavigationController.m */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		E7561C141CC4791300E62331 /* BaseTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C151CC4791300E62331 /* BaseTabBarController.h */,
+				E7561C161CC4791300E62331 /* BaseTabBarController.m */,
+			);
+			path = BaseTabBarController;
+			sourceTree = "<group>";
+		};
+		E7561C171CC4791300E62331 /* BaseTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C181CC4791300E62331 /* BaseTableViewController.h */,
+				E7561C191CC4791300E62331 /* BaseTableViewController.m */,
+				E7561C1A1CC4791300E62331 /* EGO */,
+			);
+			path = BaseTableViewController;
+			sourceTree = "<group>";
+		};
+		E7561C1A1CC4791300E62331 /* EGO */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C1B1CC4791300E62331 /* blueArrow.png */,
+				E7561C1C1CC4791300E62331 /* EGORefreshTableFooterView.h */,
+				E7561C1D1CC4791300E62331 /* EGORefreshTableFooterView.m */,
+				E7561C1E1CC4791300E62331 /* EGORefreshTableHeaderView.h */,
+				E7561C1F1CC4791300E62331 /* EGORefreshTableHeaderView.m */,
+				E7561C201CC4791300E62331 /* EGOViewCommon.h */,
+			);
+			path = EGO;
+			sourceTree = "<group>";
+		};
+		E7561C211CC4791300E62331 /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C221CC4791300E62331 /* BaseViewController.h */,
+				E7561C231CC4791300E62331 /* BaseViewController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		E7561C241CC4791300E62331 /* BaseNetworkRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C251CC4791300E62331 /* BaseNetworkRequest.h */,
+				E7561C261CC4791300E62331 /* BaseNetworkRequest.m */,
+			);
+			path = BaseNetworkRequest;
+			sourceTree = "<group>";
+		};
+		E7561C271CC4791300E62331 /* BaseService */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C281CC4791300E62331 /* BaseService.h */,
+				E7561C291CC4791300E62331 /* BaseService.m */,
+			);
+			path = BaseService;
+			sourceTree = "<group>";
+		};
+		E7561C2A1CC4791300E62331 /* BaseTableViewCellDTO */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C2B1CC4791300E62331 /* BaseTableViewCellDTO.h */,
+				E7561C2C1CC4791300E62331 /* BaseTableViewCellDTO.m */,
+			);
+			path = BaseTableViewCellDTO;
+			sourceTree = "<group>";
+		};
+		E7561C2D1CC4791300E62331 /* ToastView */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C2E1CC4791300E62331 /* ToastView.h */,
+				E7561C2F1CC4791300E62331 /* ToastView.m */,
+			);
+			path = ToastView;
+			sourceTree = "<group>";
+		};
+		E7561C3B1CC4798700E62331 /* BaseApplication */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C3C1CC4798700E62331 /* BaseApplication.h */,
+				E7561C3D1CC4798700E62331 /* BaseApplication.m */,
+			);
+			path = BaseApplication;
+			sourceTree = "<group>";
+		};
+		E7561C401CC47CBB00E62331 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C411CC47CBB00E62331 /* AppConstant.h */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		E7561C421CC47D0400E62331 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				E7561C431CC47D0400E62331 /* UIColor+AppConfigColor.h */,
+				E7561C441CC47D0400E62331 /* UIColor+AppConfigColor.m */,
+				E7561C451CC47D0400E62331 /* UIColor+SNFoundation.h */,
+				E7561C461CC47D0400E62331 /* UIColor+SNFoundation.m */,
+				E7561C471CC47D0400E62331 /* UIImage+ExFoundation.h */,
+				E7561C481CC47D0400E62331 /* UIImage+ExFoundation.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		FAEF3B760E1AB49DE42E1F9B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8568814B3B14232284BEE230 /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,9 +290,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7561C0C1CC4773100E62331 /* Build configuration list for PBXNativeTarget "XZJFramework" */;
 			buildPhases = (
+				DEAE1C48E4778DF43F675C7C /* Check Pods Manifest.lock */,
 				E7561BF11CC4773100E62331 /* Sources */,
 				E7561BF21CC4773100E62331 /* Frameworks */,
 				E7561BF31CC4773100E62331 /* Resources */,
+				A5C1C73083A20CB2EC8638D5 /* Embed Pods Frameworks */,
+				ED1525CDD794ED40563AF2C8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,45 +343,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7561C081CC4773100E62331 /* LaunchScreen.storyboard in Resources */,
 				E7561C051CC4773100E62331 /* Assets.xcassets in Resources */,
-				E7561C031CC4773100E62331 /* Main.storyboard in Resources */,
+				E7561C331CC4791300E62331 /* blueArrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5C1C73083A20CB2EC8638D5 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEAE1C48E4778DF43F675C7C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		ED1525CDD794ED40563AF2C8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E7561BF11CC4773100E62331 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7561C001CC4773100E62331 /* ViewController.m in Sources */,
+				E7561C311CC4791300E62331 /* BaseTabBarController.m in Sources */,
+				E7561C4B1CC47D0400E62331 /* UIImage+ExFoundation.m in Sources */,
+				E7561C361CC4791300E62331 /* BaseViewController.m in Sources */,
+				E7561C391CC4791300E62331 /* BaseTableViewCellDTO.m in Sources */,
+				E7561C371CC4791300E62331 /* BaseNetworkRequest.m in Sources */,
+				E7561C4A1CC47D0400E62331 /* UIColor+SNFoundation.m in Sources */,
+				E7561C3A1CC4791300E62331 /* ToastView.m in Sources */,
 				E7561BFD1CC4773100E62331 /* AppDelegate.m in Sources */,
+				E7561C3E1CC4798700E62331 /* BaseApplication.m in Sources */,
+				E7561C381CC4791300E62331 /* BaseService.m in Sources */,
+				E7561C341CC4791300E62331 /* EGORefreshTableFooterView.m in Sources */,
 				E7561BFA1CC4773100E62331 /* main.m in Sources */,
+				E7561C301CC4791300E62331 /* BaseNavigationController.m in Sources */,
+				E7561C491CC47D0400E62331 /* UIColor+AppConfigColor.m in Sources */,
+				E7561C351CC4791300E62331 /* EGORefreshTableHeaderView.m in Sources */,
+				E7561C321CC4791300E62331 /* BaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		E7561C011CC4773100E62331 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7561C021CC4773100E62331 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		E7561C061CC4773100E62331 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E7561C071CC4773100E62331 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E7561C0A1CC4773100E62331 /* Debug */ = {
@@ -263,9 +511,13 @@
 		};
 		E7561C0D1CC4773100E62331 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F6AEADF1433B35BC6C43B2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = XZJFramework/Prefix.pch;
 				INFOPLIST_FILE = XZJFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zijun.Xiong.XZJFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -274,9 +526,13 @@
 		};
 		E7561C0E1CC4773100E62331 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F36434798EB391657ACFE56F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
+				GCC_PREFIX_HEADER = XZJFramework/Prefix.pch;
 				INFOPLIST_FILE = XZJFramework/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = zijun.Xiong.XZJFramework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +558,7 @@
 				E7561C0E1CC4773100E62331 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
