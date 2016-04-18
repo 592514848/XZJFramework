@@ -3,7 +3,7 @@
 //  Giivv
 //
 //  Created by 熊梓君 on 16/4/14.
-//  Copyright © 2016年 Xiong, ZIjun . All rights reserved.
+//  Copyright © 2016年 Xiong, Zijun . All rights reserved.
 //
 
 #import "BaseApplication.h"
