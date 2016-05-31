@@ -2,8 +2,8 @@
 //  UIImage+ExFoundation.m
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/16.
-//  Copyright © 2016年 Xiong, Zijun . All rights reserved.
+//  Created by Xiong, Zijun on 16/4/16.
+//  Copyright © 2016 Youdar . All rights reserved.
 //
 
 #import "UIImage+ExFoundation.h"
@@ -20,5 +20,15 @@
         i++;
     }
     return imageData;
+}
+
+#pragma mark adjust iamge size
+-(UIImage*)adjustImageWithScaleToSize:(CGSize)size
+{
+    UIGraphicsBeginImageContext(size);
+    [self drawInRect:CGRectMake(0, 0, size.width, size.height)];
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return scaledImage;
 }
 @end

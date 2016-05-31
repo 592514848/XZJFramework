@@ -2,8 +2,8 @@
 //  BaseNetworkRequest.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/10.
-//  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
+//  Created by Xiong, Zijun on 16/4/10.
+//  Copyright © 2016 Youdar. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -13,46 +13,63 @@ typedef void (^RequestFailedBlock)(id DAO, NSError *error);
 
 @interface BaseNetworkRequest : NSObject
 /**
- *  网络请求超时时间
+ *  Network request timeout
  */
 @property(nonatomic, assign) CGFloat timeoutInterval;
 
+@property(nonatomic, assign) BOOL showActivityIndicator;
+/**
+ *  request data
+ */
+@property(nonatomic, strong) NSURLSessionDataTask *sessionDataTask;
 
 /**
- *  构建请求地址
+ *  Build request interface address
  *
- *  @return 请求地址
+ *  @return The requested interface address
  */
 - (NSString *)requestUrlPath;
 
 /**
- *  验证请求参数
+ *  validate request parameters
  */
 - (BOOL)validateRequestParameters;
 
 /**
- *  构建请求参数
+ *  Build request parameters
  *
- *  @return 请求参数
+ *  @return The parameters of the request
  */
 - (NSDictionary *)parameters;
 
 /**
- *  验证接口返回数据
+ *  Return the data validation interfaces
  *
- *  @param 接口返回数据
+ *  @param returnData Interface the data returned
  *
- *  @return 验证结果（YES:验证成功 ； NO:验证失败）
+ *  @return Validation by returning YES;Validation failure returns NO
  */
 - (BOOL)validateResponseData:(id) returnData;
 
 /**
- *  Get 请求方式
+ *  The Get method request data
  */
 - (void)getDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
 
 /**
- *  Post 请求方式
+ *  The Post method request data
  */
 - (void)postDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
+
+/**
+ *  The Put method request data
+ */
+- (void)putDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
+
+/**
+ *  The Delete method request data
+ */
+- (void)deleteDataSuccess:(RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
+
+- (void)uploadData: (NSData *)imageData externName:(NSString *) externName  success: (RequestSuccessBlock)success failure:(RequestFailedBlock)failure;
 @end

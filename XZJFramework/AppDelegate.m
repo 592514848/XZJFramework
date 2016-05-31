@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  XZJFramework
 //
-//  Created by 熊梓君 on 4/18/16.
+//  Created by Xiong, Zijun on 4/18/16.
 //  Copyright © 2016 Xiong, Zijun. All rights reserved.
 //
 

@@ -2,8 +2,8 @@
 //  UIColor+SNFoundation.m
 //  SNFoundation
 //
-//  Created by 熊梓君 on 16/4/10.
-//  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
+//  Created by Xiong, Zijun on 16/4/10.
+//  Copyright © 2016 Youdar. All rights reserved.
 //
 
 #import "UIColor+SNFoundation.h"

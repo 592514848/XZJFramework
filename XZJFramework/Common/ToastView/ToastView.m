@@ -2,8 +2,8 @@
 //  ToastView.m
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/9.
-//  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
+//  Created by Xiong, Zijun on 16/4/9.
+//  Copyright © 2016 Youdar. All rights reserved.
 //
 
 #import "ToastView.h"
@@ -11,6 +11,7 @@ static ToastView * toastView = nil;
 
 @interface ToastView()
 @property(nonatomic, strong) UILabel *textLabel;
+@property(nonatomic, strong) UIAlertView *alertView;
 @end
 
 @implementation ToastView
@@ -31,10 +32,18 @@ static ToastView * toastView = nil;
         [_textLabel setBackgroundColor: [UIColor clearColor]];
         [_textLabel setTextColor: [UIColor whiteColor]];
         [_textLabel setNumberOfLines: 0];
+        [_textLabel setLineBreakMode: NSLineBreakByCharWrapping];
         [_textLabel setShadowColor: [UIColor darkGrayColor]];
         [_textLabel setShadowOffset: CGSizeMake(1.0, 1.0f)];
     }
     return _textLabel;
+}
+
+- (UIAlertView *)alertView{
+    if(!_alertView){
+        _alertView = [[UIAlertView alloc] initWithTitle: @"Oops" message: @"" delegate: nil cancelButtonTitle: @"OK" otherButtonTitles: nil];
+    }
+    return _alertView;
 }
 
 #pragma mark -
@@ -51,45 +60,62 @@ static ToastView * toastView = nil;
 
 #pragma mark - public method
 /**
- *  显示指定信息
- *  默认2秒隐藏
- *  @param text 要显示的消息
+ *  show the specified message
+ *  default duration is 2.0s
+ *  @param text message
  */
 - (void)showWithText:(NSString *) text{
-    [self showWithText: text duration: 2.0f];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self showWithText: text duration: 2.0f];
+    });
 }
 /**
- *  显示指定信息
+ *  show the specified message
  *
- *  @param text     要显示的消息
- *  @param duration 隐藏的时间
+ *  @param text     message
+ *  @param duration The disappearance of time
  */
 - (void)showWithText:(NSString *) text duration:(CGFloat) duration{
     if(IsStrEmpty(text)){
         return;
     }
+    // Initialization code
     UIFont *font = [UIFont systemFontOfSize:16];
     NSDictionary *attributes = @{NSFontAttributeName: font};
-    CGSize textSize = [text sizeWithAttributes: attributes];
+    CGSize size = CGSizeMake(SCREEN_WIDTH - 30.0f, SCREEN_HEIGHT);
+    CGSize textSize = [text boundingRectWithSize:size options: NSStringDrawingTruncatesLastVisibleLine |NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes: attributes context:nil].size;
     
-    //更新textLabel
+    //update textLabel
     [self.textLabel setFrame: CGRectMake(10.0f, 10.0f, textSize.width, textSize.height)];
     [self.textLabel setText: text];
     [self.textLabel setFont: font];
     
+    //update self
     CGRect frame;
     frame.size = CGSizeMake(textSize.width + 20.0f, textSize.height + 20.0f);
     frame.origin = CGPointMake((SCREEN_WIDTH - frame.size.width) / 2, SCREEN_HEIGHT - frame.size.height - TABBAR_HEIGHT - NAVIGATIONBAR_HEIGHT - 20.0f);
     [self setFrame: frame];
     [WINDOW addSubview:self];
     
-    //定时器
+    //timer
     NSTimer *timer = [NSTimer timerWithTimeInterval: duration  target:self selector:@selector(removeToastView) userInfo:nil repeats:NO];
     [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
     
 }
 
-#pragma mark － 移除
+- (void)showAlertText:(NSString *) text{
+    [self.alertView setTitle: @"Oops"];
+    [self.alertView setMessage: text];
+    [self.alertView show];
+}
+
+- (void)showAlertText:(NSString *) text withTitle: (NSString *)title{
+    [self.alertView setTitle: title];
+    [self.alertView setMessage: text];
+    [self.alertView show];
+}
+
+#pragma mark － remove toastView
 - (void)removeToastView{
     [UIView animateWithDuration: 0.5f animations:^{
         toastView.alpha = 0.0f;

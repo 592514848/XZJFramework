@@ -2,7 +2,7 @@
 //  BaseService.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/10.
+//  Created by Xiong, Zijun on 16/4/10.
 //  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
 //
 

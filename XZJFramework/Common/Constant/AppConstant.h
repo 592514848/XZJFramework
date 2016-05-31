@@ -2,21 +2,23 @@
 //  AppConstant.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/4.
-//  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
+//  Created by Xiong, Zijun on 16/4/4.
+//  Copyright © 2016 Youdar. All rights reserved.
 //
 
 #ifndef AppConstant_h
 #define AppConstant_h
 
 ////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////Begin: 设备信息宏定义/////////////////////////////////
+///////////////////////////Begin: Device Macro definition///////////////////////////
 /**
  *  device width and height
  */
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
+#define HEIGHT_PROPORTION SCREEN_HEIGHT / 568.0f
+#define WIDTH_PROPORTION 375.0f / SCREEN_WIDTH
 /**
  *  tabbar height
  */
@@ -33,14 +35,24 @@
 #define STATUSBAR_HEIGHT 20.0f
 
 /**
+ *  UIApplication object
+ */
+#define UIAPPLICATION [UIApplication sharedApplication]
+
+/**
  *  window object
  */
 #define WINDOW [[UIApplication sharedApplication] keyWindow]
-/////////////////////////////////End: 设备信息宏定义/////////////////////////////////
+
+/**
+ *  device system version
+ */
+#define DEVICE_SYSTEM_VERSION [[[UIDevice currentDevice] systemVersion] floatValue]
+///////////////////////////End: Device Macro definition///////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////Begin: 常用功能宏定义///////////////////////////////
+///////////////////////////Begin: Function Macro definition/////////////////////////
 /**
  *  __weak self define
  */
@@ -69,29 +81,58 @@
 /**
  *  validate string
  */
-#define VALIDATE_STRING(str) IsNilOrNull(str) ? @"" : str
+#define VALIDATE_STRING(str) (IsNilOrNull(str) ? @"" : str)
 
 /**
- *  validate nsnumber
+ *  update string
  */
-#define VALIDATE_NUMBER(number) IsNilOrNull(number) ? @0 : number
+#define UPDATE_STRING(old, new) ((IsNilOrNull(new) || IsStrEmpty(new)) ? old : new)
+
+/**
+ *  validate NSNumber
+ */
+#define VALIDATE_NUMBER(number) (IsNilOrNull(number) ? @0 : number)
+
+/**
+ *  update NSNumber
+ */
+#define UPDATE_NUMBER(old, new) (IsNilOrNull(new) ? old : new)
 
 /**
  *  validate NSArray
  */
-#define VALIDATE_Array(arr) IsNilOrNull(arr) ? [NSArray array] : arr
+#define VALIDATE_ARRAY(arr) (IsNilOrNull(arr) ? [NSArray array] : arr)
+
+/**
+ *  update NSArray
+ */
+#define UPDATE_ARRAY(old, new) (IsNilOrNull(new) ? old : new)
+
+/**
+ *  update NSDate
+ */
+#define UPDATE_DATE(old, new) (IsNilOrNull(new) ? old : new)
+
+/**
+ *  validate bool
+ */
+#define VALIDATE_BOOL(value) ((value > 0) ? YES : NO)
 
 /**
  *  Image Url transfer
  */
 #define IMAGE_URL(str) [NSURL URLWithString: str]
 
-//////////////////////////////////End: 常用功能宏定义////////////////////////////////
+/**
+ *  nil turn to null
+ */
+#define Nil_TURNTO_Null(objc) (objc == nil ? [NSNull null] : objc)
+///////////////////////////End: Function Macro definition/////////////////////////
 //////////////////////////////////////////////////////////////////////////////////
 
 
 ////////////////////////////////////////////////////////////////////////////////////
-////////////////////////////////Begin: 常用配置参数宏定义//////////////////////////////
+///////////////////////Begin: App Parameters Macro definition///////////////////////
 /**
  *  The path of the local user information
  */
@@ -106,7 +147,12 @@
  *  default Image
  */
 #define DEFAULT_IMAGE [UIImage imageNamed: @"common_default"]
-/////////////////////////////////Begin: 常用配置参数宏定义//////////////////////////////
+
+/**
+ *  defaults pageSize
+ */
+#define DEFAULT_PAGESIZE 30
+///////////////////////Begin: App Parameters Macro definition///////////////////////
 ////////////////////////////////////////////////////////////////////////////////////
 
 #endif /* AppConstant_h */

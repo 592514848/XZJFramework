@@ -2,7 +2,7 @@
 //  BaseNavigationController.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/7.
+//  Created by Xiong, Zijun on 16/4/7.
 //  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
 //
 

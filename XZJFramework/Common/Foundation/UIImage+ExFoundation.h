@@ -2,8 +2,8 @@
 //  UIImage+ExFoundation.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/16.
-//  Copyright © 2016年 Xiong, Zijun . All rights reserved.
+//  Created by Xiong, Zijun on 16/4/16.
+//  Copyright © 2016 Youdar . All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -18,4 +18,6 @@
  *  @return compressed image data
  */
 - (NSData *)compressedImgLess12M:(UIImage*)image;
+
+-(UIImage*)adjustImageWithScaleToSize:(CGSize)size;
 @end

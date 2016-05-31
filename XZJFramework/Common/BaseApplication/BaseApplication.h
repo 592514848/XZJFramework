@@ -2,41 +2,61 @@
 //  BaseApplication.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/14.
-//  Copyright © 2016年 Xiong, Zijun . All rights reserved.
+//  Created by Xiong, Zijun on 16/4/14.
+//  Copyright © 2016 Youdar . All rights reserved.
 //
 #define BASEAPPLICATION [BaseApplication shareManager]
+#define LOGINUSER_NAME [NSString stringWithFormat: @"%@ %@", [[BASEAPPLICATION loginUser] firstName],[[BASEAPPLICATION loginUser] lastName]]
+
 #import <Foundation/Foundation.h>
 
 @interface BaseApplication : NSObject
 /**
- *  是否登录
+ *  Whether the login
  */
 @property(nonatomic, assign) BOOL isLogin;
 /**
- *  当前登录用户
+ *  The current logged in user
  */
-//@property(nonatomic, strong) UserModel *loginUser;
+//@property(nonatomic, strong) Donor *loginUser;
 
 /**
- *  单例
+ *  server's token
+ */
+@property(nonatomic, strong) NSString *serverToken;
+/**
+ *  current firstReaposer
+ */
+@property(nonatomic, strong) id currentFirstResponser;
+
+/**
+ *  static object
  *
  *  @return BaseApplication
  */
 + (BaseApplication *)shareManager;
-
 /**
- *  保存用户信息在本地
+ *  Save the current logged in user
  *
- *  @param 用户信息
+ *  @param userInfo user model
  */
-//- (void)saveLoginUser:(UserModel *) userInfo;
+//- (void)saveLoginUser:(Donor *) userInfo;
 /**
- *  获取本地保存的用户
+ *  Gets the current logged in user
  */
-//- (void)getLoginuser;
+- (void)getLoginuser;
 /**
- *  注销
+ *  Log out
  */
 - (void)removeLoginUser;
+/**
+ *  mark save token
+ *
+ *  @param token token
+ */
+- (void)saveToken:(NSString *) token;
+/**
+ *  remove token
+ */
+- (void)removeToken;
 @end

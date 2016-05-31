@@ -2,8 +2,8 @@
 //  ToastView.h
 //  Giivv
 //
-//  Created by 熊梓君 on 16/4/9.
-//  Copyright © 2016年 Xiong, ZIjun. All rights reserved.
+//  Created by Xiong, Zijun on 16/4/9.
+//  Copyright © 2016 Youdar. All rights reserved.
 //
 
 #define TOASTVIEW [ToastView shareManager]
@@ -16,4 +16,6 @@
 +(ToastView *)shareManager;
 - (void)showWithText:(NSString *) text;
 - (void)showWithText:(NSString *) text duration:(CGFloat) duration;
+- (void)showAlertText:(NSString *) text;
+- (void)showAlertText:(NSString *) text withTitle: (NSString *)title;
 @end
