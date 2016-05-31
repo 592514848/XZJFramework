@@ -34,6 +34,7 @@
 		E7F221751CFD933500183A2D /* UIView+ExFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F221611CFD933500183A2D /* UIView+ExFoundation.m */; };
 		E7F221761CFD933500183A2D /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F221641CFD933500183A2D /* ToastView.m */; };
 		E7F221771CFD933500183A2D /* XZJActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F221671CFD933500183A2D /* XZJActivityIndicatorView.m */; };
+		E7F2217B1CFD952800183A2D /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E7F2217A1CFD952800183A2D /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,8 @@
 		E7F221641CFD933500183A2D /* ToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastView.m; sourceTree = "<group>"; };
 		E7F221661CFD933500183A2D /* XZJActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XZJActivityIndicatorView.h; sourceTree = "<group>"; };
 		E7F221671CFD933500183A2D /* XZJActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XZJActivityIndicatorView.m; sourceTree = "<group>"; };
+		E7F221791CFD952800183A2D /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		E7F2217A1CFD952800183A2D /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		F36434798EB391657ACFE56F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +141,7 @@
 		E7561BF71CC4773100E62331 /* XZJFramework */ = {
 			isa = PBXGroup;
 			children = (
+				E7F221781CFD950B00183A2D /* Test */,
 				E7F2213B1CFD933500183A2D /* Common */,
 				E7F221201CFD92BB00183A2D /* BaseFramework */,
 				E7561BF81CC4773100E62331 /* Supporting Files */,
@@ -347,6 +351,15 @@
 			path = XZJActivityIndicatorView;
 			sourceTree = "<group>";
 		};
+		E7F221781CFD950B00183A2D /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				E7F221791CFD952800183A2D /* TestViewController.h */,
+				E7F2217A1CFD952800183A2D /* TestViewController.m */,
+			);
+			path = Test;
+			sourceTree = "<group>";
+		};
 		FAEF3B760E1AB49DE42E1F9B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -489,6 +502,7 @@
 				E7F221731CFD933500183A2D /* UIColor+SNFoundation.m in Sources */,
 				E7F2216B1CFD933500183A2D /* BaseTableViewCellDTO.m in Sources */,
 				E7F221691CFD933500183A2D /* BaseNetworkRequest.m in Sources */,
+				E7F2217B1CFD952800183A2D /* TestViewController.m in Sources */,
 				E7F221361CFD92BB00183A2D /* BaseTableViewController.m in Sources */,
 				E7F221701CFD933500183A2D /* NSDictionary+ExFoundation.m in Sources */,
 				E7F2216D1CFD933500183A2D /* BaseTextView.m in Sources */,

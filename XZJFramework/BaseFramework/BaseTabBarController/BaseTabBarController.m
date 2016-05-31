@@ -8,6 +8,7 @@
 //
 
 #import "BaseTabBarController.h"
+#import "TestViewController.h"
 
 @interface BaseTabBarController()
 @end
@@ -26,17 +27,18 @@
 #pragma mark - load viewControllers
 - (void)loadViewControllers{
     NSMutableArray *controllersArray = [NSMutableArray array];
-    for(NSInteger i = 0; i < 1; i++){
+    for(NSInteger i = 0; i < 2; i++){
         BaseNavigationController *navigationController = [[BaseNavigationController alloc] init];
         switch (i) {
             case 0:{
-//                HomePageViewController *homePageVC = [[HomePageViewController alloc] init];
-//                [homePageVC setTitle: @"Home"];
-//                [navigationController pushViewController: homePageVC animated: YES];
+            }
+            default:{
+                TestViewController *homePageVC = [[TestViewController alloc] init];
+                [homePageVC setTitle: @"Test"];
+                [navigationController pushViewController: homePageVC animated: YES];
+                break;
                 break;
             }
-            default:
-                break;
         }
 //        [navigationController.tabBarItem setImage: [[UIImage imageNamed:@"ic_product_normal"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
 //        [navigationController.tabBarItem setSelectedImage: [[UIImage imageNamed:@"ic_product_pressed"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
