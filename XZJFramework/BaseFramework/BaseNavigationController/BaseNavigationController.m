@@ -86,8 +86,8 @@
     /**
      *  add customer gesture
      */
-    UIPanGestureRecognizer *panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeGesture:)];
-    [self.view addGestureRecognizer: panGestureRecognizer];
+    self.panGestureRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget: self action: @selector(handleSwipeGesture:)];
+    [self.view addGestureRecognizer: self.panGestureRecognizer];
 }
 
 #pragma mark -

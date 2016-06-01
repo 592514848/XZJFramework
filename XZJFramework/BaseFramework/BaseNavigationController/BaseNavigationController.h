@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseNavigationController : UINavigationController
+@property(nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
 - (UIImageView *)navigationBarLine:(UIView *)view;
 @end
